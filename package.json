@@ -1,10 +1,18 @@
 {
   "name": "better-coding-script",
-  "version": "0.0.1",
+  "version": "1.0.0-alpha.1",
   "description": "A set of scripts to run in JavaScript and Typescript projects to easily parse your code through ESLint recommended rules and prettier. It also has specific rules for React projects (both JSX and TSX).",
-  "main": "index.js",
+  "main": "src/index.js",
+  "bin": {
+    "better-coding-script": "./bin/index.js",
+    "bcs": "./bin/bcs.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 0",
+    "prettier": "node ./bin/index.js prettier write-changed",
+    "prettier-all": "node ./bin/index.js prettier write",
+    "linc": "node ./bin/index.js linc",
+    "lint": "node ./bin/index.js lint"
   },
   "repository": {
     "type": "git",
@@ -24,5 +32,32 @@
   "bugs": {
     "url": "https://github.com/prma85/better-coding-script/issues"
   },
-  "homepage": "https://github.com/prma85/better-coding-script#readme"
+  "homepage": "https://github.com/prma85/better-coding-script#readme",
+  "files": [
+    "/src",
+    "/bin",
+    "*.md",
+    "package.json"
+  ],
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "babel-eslint": "^10.1.0",
+    "chalk": "^4.1.0",
+    "confusing-browser-globals": "^1.0.9",
+    "cross-spawn": "^7.0.3",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-jest": "^24.0.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "glob": "^7.1.6",
+    "minimatch": "^3.0.4",
+    "node-alias": "^1.0.4",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
+  }
 }
