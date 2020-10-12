@@ -18,7 +18,11 @@ const execGitCmd = args => exec("git", args).trim().toString().split("\n");
 const listChangedFiles = () => {
   const branch = execGitCmd(["branch", "-r"])
     .filter(b => b.includes("origin/HEAD"))[0]
-    .replace("  origin/HEAD -> ", "");
+    .replace("origin/HEAD ->", "")
+    .replace("\n", "")
+    .replace("\r", "")
+    .trim();
+
   const mergeBase = execGitCmd(["merge-base", "HEAD", branch]);
   return new Set([
     ...execGitCmd(["diff", "--name-only", "--diff-filter=ACMRTUB", mergeBase]),
