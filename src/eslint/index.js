@@ -1,10 +1,12 @@
 "use strict";
 
+/* eslint-disable no-console */
+
 const minimatch = require("minimatch");
 const { ESLint } = require("eslint");
+const glob = require("glob");
 const listChangedFiles = require("../shared/listChangedFiles");
 const rules = require("./rules");
-const glob = require("glob");
 
 function intersect(files, patterns) {
   let intersection = [];
@@ -18,14 +20,8 @@ async function runESLintOnFilesWithOptions({ onlyChanged, fix = false, style = "
   // Define files to lint
   const allPaths = [];
 
-  const filesToIgnore = [
-    "**/node_modules/**",
-    "**/dist/**",
-    "**/package.json",
-    "**/tsconfig.json",
-    "**/webpack.*",
-  ];
-  
+  const filesToIgnore = ["**/node_modules/**", "**/dist/**", "**/package.json", "**/tsconfig.json", "**/webpack.*"];
+
   if (glob.sync("**/*.ts", { ignore: filesToIgnore }).length) allPaths.push("**/*.ts");
   if (glob.sync("**/*.tsx", { ignore: filesToIgnore }).length) allPaths.push("**/*.tsx");
   if (glob.sync("**/*.js", { ignore: filesToIgnore }).length) allPaths.push("**/*.js");
@@ -40,7 +36,7 @@ async function runESLintOnFilesWithOptions({ onlyChanged, fix = false, style = "
   // Create an instance with the `fix` option.
   const eslint = new ESLint({
     baseConfig: rules,
-    fix
+    fix,
   });
 
   // Lint files. This doesn't modify target files.

@@ -1,5 +1,7 @@
 "use strict";
 
+const path = require("path");
+
 module.exports = {
   extends: [require.resolve("./base")],
   root: true,
@@ -8,7 +10,7 @@ module.exports = {
       files: ["**/*.ts?(x)"],
       parser: "@typescript-eslint/parser",
       plugins: ["@typescript-eslint"],
-      extends: ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint"],
+      extends: ["airbnb-typescript", "plugin:@typescript-eslint/recommended"],
       parserOptions: {
         ecmaVersion: 2020,
         sourceType: "module",
@@ -19,6 +21,10 @@ module.exports = {
         },
         // typescript-eslint specific options
         warnOnUnsupportedTypeScriptVersion: false,
+        project: [
+          path.resolve(path.join(process.cwd(), "tsconfig.json")) ||
+            `"${path.resolve(path.normalize("../../../tsconfig.json"))}"`,
+        ],
       },
       rules: {
         // Add TypeScript specific rules (and turn off ESLint equivalents)

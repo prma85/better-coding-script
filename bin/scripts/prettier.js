@@ -13,10 +13,14 @@ process.on("unhandledRejection", err => {
 
 const args = process.argv.slice(2).join(" ");
 const execSync = require("child_process").execSync;
+const path = require("path");
 
 try {
-  execSync("node " + require.resolve("../../src/prettier/index.js") + " " + args, { stdio: "inherit" });
+  execSync(`node "${path.normalize(path.join(__dirname, "../../src/prettier/index.js"))}" ${args}`, {
+    stdio: "inherit",
+    shell: true,
+  });
   return true;
 } catch (e) {
-  process.exit(e.status || 1);
+  process.exit(e.status || 144);
 }

@@ -1,9 +1,11 @@
 "use strict";
 
-const execFileSync = require("child_process").execFileSync;
+/* eslint-disable no-console */
+
+const { execFileSync } = require("child_process");
 
 const exec = (command, args) => {
-  console.log("> " + [command].concat(args).join(" "));
+  console.log(`> ${[command, ...args].join(" ")}`);
   const options = {
     cwd: process.cwd(),
     env: process.env,

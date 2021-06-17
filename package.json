@@ -1,6 +1,6 @@
 {
   "name": "better-coding-script",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "A set of scripts to run in JavaScript and Typescript projects to easily parse your code through ESLint recommended rules and prettier. It also has specific rules for React projects (both JSX and TSX).",
   "main": "src/index.js",
   "bin": {
@@ -40,24 +40,28 @@
     "package.json"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.1.1",
-    "@typescript-eslint/parser": "^4.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
     "babel-eslint": "^10.1.0",
-    "chalk": "^4.1.0",
-    "confusing-browser-globals": "^1.0.9",
+    "chalk": "^4.1.1",
+    "confusing-browser-globals": "^1.0.10",
     "cross-spawn": "^7.0.3",
-    "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-babel": "^5.3.1",
-    "eslint-plugin-cypress": "^2.11.1",
-    "eslint-plugin-jest": "^24.0.1",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.2",
-    "glob": "^7.1.6",
+    "eslint-plugin-cypress": "^2.11.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "glob": "^7.1.7",
     "minimatch": "^3.0.4",
     "node-alias": "^1.0.4",
-    "prettier": "^2.1.2",
-    "typescript": "^4.0.3"
+    "path": "^0.12.7",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.3"
   }
 }

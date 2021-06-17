@@ -116,7 +116,6 @@ module.exports = {
   ],
   "no-with": "warn",
   "no-whitespace-before-property": "warn",
-  quotes: ["warn", "double"],
   "require-yield": "warn",
   "rest-spread-spacing": ["warn", "never"],
   strict: "off",
