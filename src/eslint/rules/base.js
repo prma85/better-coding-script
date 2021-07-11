@@ -5,28 +5,28 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-"use strict";
+'use strict';
 
 // This file contains the minimum ESLint configuration required for Create
 // React App support, and is used as the `baseConfig` for `eslint-loader`
 // to ensure that user-provided configs don't need this boilerplate.
 
-const rules = require("./rules");
+const rules = require('./rules');
 
 module.exports = {
   root: true,
 
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
 
-  plugins: ["react", "react-hooks", "jsx-a11y"],
+  plugins: ['react', 'react-hooks', 'jsx-a11y', 'eslint-plugin-prettier'],
 
   extends: [
-    "airbnb",
-    "prettier",
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
+    'airbnb',
+    'eslint-config-prettier',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
 
   env: {
@@ -45,21 +45,17 @@ module.exports = {
   },
 
   ignorePatterns: [
-    "**/antd/es",
-    "**/antd/icons",
-    "**/antd/lib",
-    "**/bin",
-    "**/cypress/cypress/**",
-    "**/dist",
-    "**/hub-dev-server/v2",
-    "**/node_modules",
-    "**/vendor",
-    "**/webpack.*",
+    '**/bin',
+    '**/cypress/cypress/**',
+    '**/dist',
+    '**/node_modules',
+    '**/vendor',
+    '**/webpack.*',
   ],
 
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module",
+    sourceType: 'module',
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
       jsx: true,
@@ -70,7 +66,7 @@ module.exports = {
 
   settings: {
     react: {
-      version: "detect",
+      version: 'detect',
     },
   },
   rules,

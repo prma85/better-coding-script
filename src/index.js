@@ -1,5 +1,3 @@
-#!/usr/bin/env node
+const eslint = require('./eslint/rules/index');
 
-"use strict";
-
-require("node-alias")("iqws", __dirname, { message: false });
+module.exports = eslint;

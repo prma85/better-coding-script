@@ -74,7 +74,7 @@ Create a file called `.eslintrc.js` and add the following content
 
 ```js
 module.exports = {
-  extends: [require.resolve("better-coding-script")],
+  extends: [require.resolve('better-coding-script')],
 };
 ```
 

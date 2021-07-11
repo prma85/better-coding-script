@@ -1,49 +1,41 @@
 module.exports = {
-  $schema: "http://json.schemastore.org/prettierrc",
-  arrowParens: "avoid",
-  bracketSpacing: true,
-  jsxSingleQuote: false,
-  parser: "typescript",
-  printWidth: 120,
-  semi: true,
-  singleQuote: false,
-  tabWidth: 2,
-  trailingComma: "es5",
+  ...require('airbnb-prettier-config'),
+  parser: 'typescript',
   overrides: [
     {
-      files: "*.json",
+      files: '*.json',
       options: {
-        parser: "json",
+        parser: 'json',
         bracketSpacing: false,
-        trailingComma: "none",
+        trailingComma: 'none',
       },
     },
     {
-      files: "*.less",
-      options: { parser: "less" },
+      files: '*.less',
+      options: { parser: 'less' },
     },
     {
-      files: "*.scss",
-      options: { parser: "scss" },
+      files: '*.scss',
+      options: { parser: 'scss' },
     },
     {
-      files: "*.yml",
+      files: '*.yml',
       options: {
-        parser: "yaml",
+        parser: 'yaml',
         singleQuote: true,
       },
     },
     {
-      files: "*.md",
-      options: { parser: "markdown" },
+      files: '*.md',
+      options: { parser: 'markdown' },
     },
     {
-      files: "*.mdx",
-      options: { parser: "mdx" },
+      files: '*.mdx',
+      options: { parser: 'mdx' },
     },
     {
-      files: "*.js",
-      options: { parser: "babel" },
+      files: '*.js',
+      options: { parser: 'babel' },
     },
   ],
 };

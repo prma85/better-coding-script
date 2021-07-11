@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-"use strict";
+'use strict';
 
-require("node-alias")("bcs", __dirname, { message: false });
+require('node-alias')('bcs', __dirname, { message: false });
