@@ -45,7 +45,7 @@
     "airbnb-prettier-config": "^1.0.4",
     "babel-eslint": "^10.1.0",
     "chalk": "^4.1.1",
-    "commander": "^8.0.0",
+    "commander": "^8.3.0",
     "commander.js-error": "^1.1.0",
     "confusing-browser-globals": "^1.0.10",
     "cross-spawn": "^7.0.3",
