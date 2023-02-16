@@ -147,4 +147,61 @@ module.exports = {
   'react/prop-types': 'off',
   'react/jsx-quotes': 'off',
   'react/no-unescaped-entities': 'off',
+  'sonarjs/no-duplicate-string': 'off',
+  'sonarjs/no-nested-template-literals': 'off',
+  'unicorn/consistent-function-scoping': ['error', { checkArrowFunctions: false }],
+  'unicorn/no-array-for-each': 'off',
+  'unicorn/no-null': 'off',
+  'unicorn/filename-case': [
+    'error',
+    {
+      cases: {
+        camelCase: true,
+        pascalCase: true,
+        kebabCase: true,
+      },
+      ignore: ['/^ID.js$/'],
+    },
+  ],
+  'unicorn/prevent-abbreviations': [
+    'error',
+    {
+      replacements: {
+        e: false,
+        dev: false,
+        env: false,
+        res: false,
+        props: false,
+        params: false,
+        ref: false,
+        val: false,
+        cmd: {
+          command: true,
+        },
+        errCb: {
+          handleError: true,
+        },
+      },
+    },
+  ],
+  'import/no-extraneous-dependencies': [
+    'error',
+    {
+      devDependencies: [
+        '**/__tests__/**/*.ts?x',
+        '**/*.spec.ts',
+        '**/*.spec.tsx',
+        '**/*.stories.ts?x',
+        '**/*.test.ts',
+        '**/*.test.tsx',
+        '**/helpers/tests/*.*',
+        '**/setupTests.ts',
+        '**/test-utility.tsx',
+        '**/test/*.tsx',
+        '**/utility-test.ts',
+      ],
+    },
+  ],
+  'import/no-anonymous-default-export': 'off',
+  'linebreak-style': 'off',
 };

@@ -18,7 +18,7 @@ module.exports = {
 
   parser: 'babel-eslint',
 
-  plugins: ['react', 'react-hooks', 'jsx-a11y', 'eslint-plugin-prettier'],
+  plugins: ['react', 'react-hooks', 'jsx-a11y', 'eslint-plugin-prettier', 'sonarjs'],
 
   extends: [
     'airbnb',
@@ -27,6 +27,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:unicorn/recommended',
+    'plugin:sonarjs/recommended',
   ],
 
   env: {

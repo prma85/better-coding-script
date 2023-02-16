@@ -12,7 +12,7 @@ module.exports = {
       plugins: ['@typescript-eslint'],
       extends: ['airbnb-typescript', 'plugin:@typescript-eslint/recommended'],
       parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 2022,
         sourceType: 'module',
         ecmaFeatures: {
           experimentalObjectRestSpread: true,
