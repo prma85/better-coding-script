@@ -67,7 +67,7 @@
     "minimatch": "^6.2.0",
     "node-alias": "^1.0.4",
     "path": "^0.12.7",
-    "prettier": "^2.8.4",
+    "prettier": "^2.8.8",
     "typescript": "^4.9.5"
   }
 }
