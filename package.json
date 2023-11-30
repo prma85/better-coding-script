@@ -63,7 +63,7 @@
     "eslint-plugin-sonarjs": "^0.18.0",
     "eslint-plugin-testing-library": "^5.10.2",
     "eslint-plugin-unicorn": "^45.0.2",
-    "glob": "^8.1.0",
+    "glob": "^9.0.0",
     "minimatch": "^6.2.0",
     "node-alias": "^1.0.4",
     "path": "^0.12.7",
